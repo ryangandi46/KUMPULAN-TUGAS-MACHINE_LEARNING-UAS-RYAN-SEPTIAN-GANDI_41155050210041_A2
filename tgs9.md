@@ -1,65 +1,44 @@
-# Machine Learning Project
+**Nama : Ryan Septian Gandi <br>
+NPM : 41155050210041 <br>
+Kelas : INF-A2 <br>
+Matkul : Machine Learning**
 
-## Informasi
-**Nama:** Ryan Septian Gandi  
-**NPM:** 41155050210041  
-**Kelas:** INF-A2  
-**Mata Kuliah:** Machine Learning  
+# Tugas Pertemuan 9
 
-## Koneksi dengan Google Drive
+### 1. Koneksi dengan Google Drive
 Untuk menyimpan atau mengambil dataset dari Google Drive, pertama-tama kita harus menghubungkan Google Colab dengan Google Drive:
+![image](https://github.com/user-attachments/assets/244dc21c-df24-4cc2-8fb8-ba592fbcdf29) <br>
+![image](https://github.com/user-attachments/assets/6fa244b2-76d1-4d32-971a-16e01ec40117)
 
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
 
-## Import Library yang Dibutuhkan
+### 2. Import Library yang Dibutuhkan
 Gunakan pustaka berikut untuk pemrosesan data dan penerapan K-Means:
+![image](https://github.com/user-attachments/assets/d8f53797-4648-472b-8dc2-1961db6be03c)
 
-```python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
-```
 
-## Menyiapkan Dataset
+
+### 3. Menyiapkan Dataset
 Muat dataset dari Google Drive atau sumber lain:
 
-```python
-df = pd.read_csv('/content/drive/MyDrive/dataset.csv')
-print(df.head())
-```
+![image](https://github.com/user-attachments/assets/32a34b46-8d3b-40da-9386-99d5b630c291)<br>
+![image](https://github.com/user-attachments/assets/010c2712-1d8a-45b7-9fda-c53ce56ca68a)<br>
+![image](https://github.com/user-attachments/assets/13b0e373-45c7-4a36-9001-29e9e5c1614c)<br>
+![image](https://github.com/user-attachments/assets/c3633920-dc40-44f6-b445-23f65348f65a)
 
-## Menggunakan Library K-Means
+
+### 4. Menggunakan Library K-Means
 Terapkan algoritma K-Means untuk melakukan klasterisasi:
 
-```python
-kmeans = KMeans(n_clusters=3)
-kmeans.fit(df)
-labels = kmeans.labels_
-```
+![image](https://github.com/user-attachments/assets/6de7fc93-9877-4d63-9dcb-e469963e821c)<br>
+![image](https://github.com/user-attachments/assets/2868a531-4dc1-41a9-9c1b-150813f146fe)<br>
+![image](https://github.com/user-attachments/assets/450e6f2d-35ec-46d0-b571-af22792548d5)
 
-## Menampilkan Output
+
+
+### 5. Menampilkan Output
 Visualisasi hasil klasterisasi menggunakan matplotlib:
 
-```python
-plt.scatter(df.iloc[:, 0], df.iloc[:, 1], c=labels, cmap='viridis')
-plt.xlabel('Feature 1')
-plt.ylabel('Feature 2')
-plt.title('K-Means Clustering')
-plt.show()
-```
+![image](https://github.com/user-attachments/assets/0e4469fd-26e5-4f23-b507-70afaa6baf4e)<br>
+![image](https://github.com/user-attachments/assets/3f5ae793-1439-4e6e-9835-bee50ec9d989)
 
-## Gambar
-Jika dokumen asli memiliki gambar, simpan di dalam repositori dan rujuk menggunakan format berikut:
 
-```markdown
-![Deskripsi Gambar](path/to/image.png)
-```
-
-Pastikan gambar ditempatkan dalam folder yang benar, misalnya `images/` dalam repositori.
-
-## Lisensi
-Tambahkan informasi lisensi jika diperlukan.
